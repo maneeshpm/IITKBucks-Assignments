@@ -4,7 +4,7 @@
 python3 assign1.py
 ```
 
-Enter the desired string and hit enter to get the smallest integer x when appended to the string gives a hash hex less than the target(0x0000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF). Eg
+Enter the desired string and hit enter to get the smallest integer x when appended to the string gives a hash hex less than the target(`0x0000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF`). Eg
 ```
 maneesh
 38416
