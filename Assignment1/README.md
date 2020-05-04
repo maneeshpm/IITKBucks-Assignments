@@ -1,19 +1,13 @@
-### Assignment 1: Generate Nonce Value
-Program to find an integer nonce value `x` such that the SHA256 hash of concat of the input string and `x` is less than the target `0x0000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF`
-
+## Assignment 1: Generate Nonce Value
+Program to find an integer nonce value `x` such that the SHA256 hash of concat of an `input string` and `x` is less than the target `0x0000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF`
 #### Running the code
+`python3 assign1.py`
 
-```
-python3 assign1.py
-```
-Enter the desired string and hit enter
-
-`maneesh`
+Enter the desired string and hit enter </br>
+`maneesh`</br>
 `38416`
 
-*Uncomment line 16 to view the corresponding hash. Eg*
-
-
+*Uncomment line 16 to view the corresponding hash. Eg* </br>
 `maneesh`
 ```
 38416
