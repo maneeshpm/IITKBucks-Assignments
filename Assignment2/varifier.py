@@ -12,6 +12,6 @@ varifier = pss.new(publicKey)
 
 try:
     varifier.verify(h, bytes.fromhex(signHex))
-    print("Signature valid!")
+    print("\nSignature valid!")
 except(ValueError, TypeError):
-    print("Validation failed!")
+    print("\nValidation failed!")
