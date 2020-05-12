@@ -8,10 +8,10 @@ plainText = input("Enter the unencrypted text: ")
 
 publicKey = RSA.import_key(open(keyPath).read())
 h = SHA256.new(plainText.encode('utf-8'))
-varifier = PKCS1_PSS.new(publicKey)
+verifier = PKCS1_PSS.new(publicKey)
 
 
-if varifier.verify(h,bytes.fromhex(signHex)):
+if verifier.verify(h,bytes.fromhex(signHex)):
     print("\nSignature valid!")
 else:
     print("\nValidation failed!")
