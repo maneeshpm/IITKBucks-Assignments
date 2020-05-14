@@ -1,4 +1,5 @@
 ## Assignment 3: Generating A Transaction File
+The file `classes` host the classes `Txn`, `Inp`, `Output`
 Program to create a binary file from the trasactiond data. The inputs are: `number of inputs` followed by `transaction id`, `index of output` and `signature` for each input. Then `number of outputs` followed by `number of coins` and `public key path` for each output.
 
 Transaction data is generated as a blob `[number of inputs][total input data][number of outputs][total output data]` and is stored in a `<hash of transaction data>.dat` file.
