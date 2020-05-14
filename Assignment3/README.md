@@ -1,8 +1,9 @@
 ## Assignment 3: Generating A Transaction File
-The file `classes` host the classes `Txn`, `Inp`, `Output`
-Program to create a binary file from the trasactiond data. The inputs are: `number of inputs` followed by `transaction id`, `index of output` and `signature` for each input. Then `number of outputs` followed by `number of coins` and `public key path` for each output.
 
-Transaction data is generated as a blob `[number of inputs][total input data][number of outputs][total output data]` and is stored in a `<hash of transaction data>.dat` file.
+- Program to create a binary file from the trasactiond data. The inputs are: `number of inputs` followed by `transaction id`, `index of output` and `signature` for each input. Then `number of outputs` followed by `number of coins` and `public key path` for each output.
+- The file `classes` host the classes `Txn`, `Inp`, `Output`. They have the function `getTxnData()`, `getBinaryInput()` and `getBinaryOutput()` to generate a blob of the data it holds.
+- The input and output data are stored on `Inp` and `Output` objects respectively. The `Txn` object houses an array of such `Inp` and `Output`.
+- Transaction data is generated as a blob `[number of inputs][total input data][number of outputs][total output data]` using the `getTxnData()` function of `Txn` object and is stored in a `<hash of transaction data>.dat` file.
 #### Running the code
 ```
 python3 txn.py
