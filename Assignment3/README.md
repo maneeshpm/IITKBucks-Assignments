@@ -1,4 +1,4 @@
-## Assignment 2: Generating A Transaction File
+## Assignment 3: Generating A Transaction File
 Program to create the a binary file from the trasactiond data. The inputs are: `number of inputs` followed by `transaction id`, `index of output` and `signature` for each input. Then `number of outputs` followed by `number of coins` and `public key path` for each output.
 
 Transaction data is generated as `[number of inputs][total input data][number of outputs][total output data]` ans is stored in a `<hash of transaction data>.dat` file.
@@ -7,6 +7,7 @@ Transaction data is generated as `[number of inputs][total input data][number of
 python3 txn.py
 ```
 Give the inputs on prompt.
+Eg.
 ```
 maneesh@edith: ~/Assignment$ python3 txn.py
 Enter the number of inputs: 1
