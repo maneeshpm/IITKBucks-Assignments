@@ -71,8 +71,8 @@ for x in range(txn.noOutputs):
     op = Output(noCoins, pubKey)
     txn.totOutput.append(op)
     
-file = open(str(txn.getTxnHash())+".dat", 'w')
-file.write(str(txn.getTxnData()))
+file = open(str(txn.getTxnHash())+".dat", 'wb')
+file.write(txn.getTxnData())
 file.close()
 print("\n{} created successfully!".format(str(txn.getTxnHash())+".dat"))
 
