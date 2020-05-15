@@ -9,9 +9,16 @@ class Inp:
 
     def getBinaryInput(self):
         return ((bytes.fromhex(self.txnID))
-        +(self.opIndex.to_bytes(2, byteorder = 'big'))
+        +(self.opIndex.to_bytes(4, byteorder = 'big'))
         +(self.lenSign.to_bytes(4, byteorder = 'big'))
         +(self.sign))
+    
+    def __str__(self):
+        pr = ("\t\tTransaction ID: {}\n".format(self.txnID)
+        +"\t\tIndex: {}\n".format(self.opIndex)
+        +"\t\tLength of signature: {}\n".format(self.lenSign)
+        +"\t\tSignature: {}\n".format(self.sign.hex()))
+        return pr          
 
 class Output:
     def __init__(self, noCoins, pubKey):
@@ -23,6 +30,12 @@ class Output:
         return (self.noCoins.to_bytes(8, byteorder = 'big')
         +self.lenPubKey.to_bytes(4,byteorder = 'big')
         +self.pubKey)
+
+    def __str__(self):
+        pr = ("\t\tNumber of coins: {}\n".format(self.noCoins)
+        +"\t\tLength of public key: {}\n".format(self.lenPubKey)
+        +"\t\tPublic key: {}\n".format(self.pubKey))
+        return pr
 
 class Txn:
     totInput=[]
@@ -46,3 +59,14 @@ class Txn:
         h = hashlib.sha256()
         h.update(self.getTxnData())
         return h.hexdigest()
+    
+    def getTxnDetails(self):
+        print("Transaction ID: {}\n".format(self.getTxnHash()))
+        print("\nNumber of inputs: {}\n".format(self.noInputs))
+        for i in range(self.noInputs):
+            print("\tInput #{}:\n".format(i+1))
+            print(self.totInput[i])
+        print("\nNumber of outputs: {}\n".format(self.noOutputs))
+        for i in range(self.noOutputs):
+            print("\tOutput #{}:\n".format(i+1))
+            print(self.totOutput[i])
