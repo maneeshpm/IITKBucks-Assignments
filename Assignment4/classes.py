@@ -8,13 +8,13 @@ class Inp:
         self.lenSign = len(self.sign)
 
     def getBinaryInput(self):
-        return ((bytes.fromhex(self.txnID))
+        return ((self.txnID)
         +(self.opIndex.to_bytes(4, byteorder = 'big'))
         +(self.lenSign.to_bytes(4, byteorder = 'big'))
         +(self.sign))
     
     def __str__(self):
-        pr = ("\t\tTransaction ID: {}\n".format(self.txnID)
+        pr = ("\t\tTransaction ID: {}\n".format(self.txnID.hex())
         +"\t\tIndex: {}\n".format(self.opIndex)
         +"\t\tLength of signature: {}\n".format(self.lenSign)
         +"\t\tSignature: {}\n".format(self.sign.hex()))
@@ -34,7 +34,7 @@ class Output:
     def __str__(self):
         pr = ("\t\tNumber of coins: {}\n".format(self.noCoins)
         +"\t\tLength of public key: {}\n".format(self.lenPubKey)
-        +"\t\tPublic key: {}\n".format(self.pubKey))
+        +"\t\tPublic key: {}\n".format(self.pubKey.decode()))
         return pr
 
 class Txn:

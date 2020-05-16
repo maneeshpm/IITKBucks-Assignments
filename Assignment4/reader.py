@@ -6,7 +6,7 @@ with open(path, 'rb') as txnFile:
 
     txn.noInputs = int.from_bytes(txnFile.read(4), 'big')
     for i in range(txn.noInputs):
-        txnID = txnFile.read(32).hex()
+        txnID = txnFile.read(32)
         opIndex = int.from_bytes(txnFile.read(4), 'big')
         signLen = int.from_bytes(txnFile.read(4), 'big')
         sign = bytes.fromhex(txnFile.read(signLen).hex())
