@@ -12,34 +12,71 @@ Give the inputs on prompt.
 Eg.
 ```
 maneesh@edith: ~/Assignment4$ python3 reader.py
-Enter path of the dat file: 4cdd8d60f816550b3b2566abbabf1446fd0a8cc68a018276656f29998d4ecfd0.dat
+Enter path of the dat file: 010.dat
 
-Transaction ID: 4cdd8d60f816550b3b2566abbabf1446fd0a8cc68a018276656f29998d4ecfd0
+Transaction ID: 92a7c6d00b98e7824efe0a61bed2c9c7bbe7d787a15ff7dd8117bded3b74654d
 
 
-Number of inputs: 2
+Number of inputs: 4
 
 	Input #1:
 
-		Transaction ID: 87bec4e88919cbf114e0014546b8dbef91cca4deaa74b0147d48f2b21dccee65
-		Index: 0
-		Length of signature: 256
-		Signature: 193aad5cadffe3356c6b79d544de50d7e160a69d4b9d884531b7791fb6cde125ce696f9b55527708399eb1f9e2697d40bb489abc24269e0ee77d39314cfe9ee170be631b3323638f0bc252209ad7a8dbf8f20455436e6da07c3beeab1118c959eb71f97969a720c5bfbe0caac859e63bf98d7759ef9fe4678f53e49f3ba6edd992b1ee79531801ecb2526662bdd785f54ae18acc921fcc67fdf1bd3b0ba00f0af053f6cdf5af40c65fa5846f25c645f5e7feaa3d81189230c32c64530a0bf134a5ab90bbd576e7cbc11d68a8a4ebfca50f16093a373c53a5a8e242241ca631785c7eeeea7b1207fb1a45f8c4756a391dbbbc2c12b4abe0930ae7b07831872e4c
+		Transaction ID: cbbee9817ab2585079ce0490369ea016808df2349a736a2ae19db4247cc9b96e
+		Index: 5
+		Length of signature: 60
+		Signature: b6d95526a41a9504680b4e7c8b763a1b1d49d4955c8486216325253fec738dd7a9e28bf921119c160f0702448615bbda08313f6a8eb668d20bf50598
 
 	Input #2:
 
-		Transaction ID: 87bec4e88919cbf114e0014546b8dbef91cca4deaa74b0147d48f2b21dccee65
-		Index: 1
-		Length of signature: 256
-		Signature: 193aad5cadffe3356c6b79d544de50d7e160a69d4b9d884531b7791fb6cde125ce696f9b55527708399eb1f9e2697d40bb489abc24269e0ee77d39314cfe9ee170be631b3323638f0bc252209ad7a8dbf8f20455436e6da07c3beeab1118c959eb71f97969a720c5bfbe0caac859e63bf98d7759ef9fe4678f53e49f3ba6edd992b1ee79531801ecb2526662bdd785f54ae18acc921fcc67fdf1bd3b0ba00f0af053f6cdf5af40c65fa5846f25c645f5e7feaa3d81189230c32c64530a0bf134a5ab90bbd576e7cbc11d68a8a4ebfca50f16093a373c53a5a8e242241ca631785c7eeeea7b1207fb1a45f8c4756a391dbbbc2c12b4abe0930ae7b07831872e4c
+		Transaction ID: 87f3c67cf22746e995af5a25367951baa2ff6cd471c483f15fb90badb37c5821
+		Index: 87332
+		Length of signature: 40
+		Signature: 81855ad8681d0d86d1e91e00167939cb6694d2c422acd208a0072939487f6999eb9d18a44784045d
+
+	Input #3:
+
+		Transaction ID: 5968ba216897e9a2b3e0cefffab0d58084375e8978104df614d73b4a90fba436
+		Index: 0
+		Length of signature: 40
+		Signature: 335b2e97aac2bd15fae04162adde96a511fabd9261425c3e945c3fbc1f270cdb734fd216d73d9196
+
+	Input #4:
+
+		Transaction ID: acb47cb9fbd8916648dd30b45f32facdd2d10922875e26689512c010960d9fa0
+		Index: 31
+		Length of signature: 60
+		Signature: 20f05332caaf4699cdcbfff00ca530121dfe2ad49169678e88dbbc4b68c9e1c66b926bcc518e2568aa80c9c31e8faa3f00918061753771f14a34f364
 
 
-Number of outputs: 1
+Number of outputs: 2
 
 	Output #1:
 
-		Number of coins: 20
-		Length of public key: 450
-		Public key: b'-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0n7WkbnP/+rlzkWXHAco\nd2gXTtQM3BUg5aN0K9zs2db2OLUCkFbww2LjWyfMXNbTHhgIVwsfqP43rapFhaVF\n3ufNPkAKQ42OvhxGgYGngtpfF7v7UEkXhNmboJugJO+lnOglz4iFGr5z4SyL78sp\nFHfjcjVJuhgUpL3lM28jS7vP/ZlB8DtUemakRH6G6daBFDK+QjZO4yUmjdahVSgO\nZnowGwd38mQZUlzMTakt+9TUdNtdHvXXNqEqDXMlgjvljuIfA8igpA+nE/T6FRe/\nUtPCn2d6Ytim3kFWQmtsp6xf3hL1aNkL2aQwd62O60i4O7HKdb7aPHG3SqvM5enz\n2wIDAQAB\n-----END PUBLIC KEY-----'
+		Number of coins: 999999999
+		Length of public key: 451
+		Public key: -----BEGIN PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA4/Vst50I4qckOJatgJlL
+AM9ozcAAoy1PBmz4fdEPbLuQidwIPTN6xCG14/osGTEh/Ys1Pis9teiV5VZ9f1eh
+91GZIYpTpRVuviGR0qoacz7z86Sru37guWtSEhy2dxbzrsJoUpK7lhGtx3ZKFwH8
+PvBHHf8kSMH+jA0V6mGWoseemcYWuJI8ZhLUUxjgnA1R/cTbwHq2OLAUe9+C9XGB
+H+uAGlyBwji8LaWsPaVLFTEIcp7ljnmXOTmgW3XfJlnFSfb/CXEc4Q8jRf3H3V5i
+MeuKtlPxndAKvCRNNl9P1vW5OWI9ls8wJkxNWsP84A+Pbw1F7wtJ/7jcA/LK4plo
+7QIDAQAB
+-----END PUBLIC KEY-----
+
+
+	Output #2:
+
+		Number of coins: 1
+		Length of public key: 451
+		Public key: -----BEGIN PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAt9aR/chfSX6H/VjSTh97
+LyrafCSrZTQe72pHkzZG9gInSNTRAufyCqR4f+qVPo7pBGOWFH7nFznYL6+7aL2w
+kd5v1AJ1S759x4t2FIbUum3cGh8tsLic7tCGouRa/4+bJCfgaWmwg7d98oK1O3nY
+Yrt5212KBg2fj51G4GnjiQQSWRtMi2AympYxL7vESHm9z4Uq6fFgtJOdq/S/T4WZ
+jkEzL9VXwyX1OVSoU7M3yKIPNrllFizst3k0jI1FUPNSNMOQkifUQnKLgvPXYCRF
+tlnLydWSQMt0t5NfAY8VABTkCiNot6Do7+abiyZngEFdz2JK8e0TyXe7td4X43SM
+mwIDAQAB
+-----END PUBLIC KEY-----
 
 ```
