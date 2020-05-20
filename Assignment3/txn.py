@@ -8,7 +8,7 @@ noInputs = int(input("Enter the number of inputs: "))
 txn.noInputs = noInputs
 for x in range(txn.noInputs):
     print("==================== Input #{} ====================".format(x))
-    txnID = input("Enter Transaction id: ")
+    txnID = bytes.fromhex(input("Enter Transaction id: "))
     opIndex = int(input("Enter index of output: "))
     sign = bytes.fromhex(input("Enter the signature: "))
     inp = Inp(txnID, opIndex, sign)
@@ -26,9 +26,5 @@ for x in range(txn.noOutputs):
     op = Output(noCoins, pubKey)
     txn.totOutput.append(op)
     
-file = open(str(txn.getTxnHash())+".dat", 'wb')
-file.write(txn.getTxnData())
-file.close()
-print("\n{} created successfully!".format(str(txn.getTxnHash())+".dat"))
-
+txn.generateTxnFile()
     

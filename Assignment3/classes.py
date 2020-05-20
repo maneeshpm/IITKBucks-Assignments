@@ -8,13 +8,13 @@ class Inp:
         self.lenSign = len(self.sign)
 
     def getBinaryInput(self):
-        return ((bytes.fromhex(self.txnID))
+        return ((self.txnID)
         +(self.opIndex.to_bytes(4, byteorder = 'big'))
         +(self.lenSign.to_bytes(4, byteorder = 'big'))
         +(self.sign))
     
     def __str__(self):
-        pr = ("\t\tTransaction ID: {}\n".format(self.txnID)
+        pr = ("\t\tTransaction ID: {}\n".format(self.txnID.hex())
         +"\t\tIndex: {}\n".format(self.opIndex)
         +"\t\tLength of signature: {}\n".format(self.lenSign)
         +"\t\tSignature: {}\n".format(self.sign.hex()))
@@ -34,7 +34,7 @@ class Output:
     def __str__(self):
         pr = ("\t\tNumber of coins: {}\n".format(self.noCoins)
         +"\t\tLength of public key: {}\n".format(self.lenPubKey)
-        +"\t\tPublic key: {}\n".format(self.pubKey))
+        +"\t\tPublic key: {}\n".format(self.pubKey.decode()))
         return pr
 
 class Txn:
@@ -70,3 +70,28 @@ class Txn:
         for i in range(self.noOutputs):
             print("\tOutput #{}:\n".format(i+1))
             print(self.totOutput[i])
+
+    def generateTxnFile(self):
+        with open(str(self.getTxnHash())+".dat",'wb') as f:
+            f.write(self.getTxnData())
+
+        print(str(self.getTxnHash())+".dat created successfully!")
+
+    def readTxnFile(self, path):
+        with open(path, 'rb') as txnFile:
+            self.noInputs = int.from_bytes(txnFile.read(4), 'big')
+            for _ in range(self.noInputs):
+                txnID = txnFile.read(32)
+                opIndex = int.from_bytes(txnFile.read(4), 'big')
+                signLen = int.from_bytes(txnFile.read(4), 'big')
+                sign = bytes.fromhex(txnFile.read(signLen).hex())
+                inp = Inp(txnID, opIndex, sign)
+                self.totInput.append(inp)
+
+            self.noOutputs = int.from_bytes(txnFile.read(4), 'big')
+            for _ in range(self.noOutputs):
+                noCoins = int.from_bytes(txnFile.read(8), 'big')
+                lenPubKey = int.from_bytes(txnFile.read(4), 'big')
+                pubKey = txnFile.read(lenPubKey)
+                op = Output(noCoins, pubKey)
+                self.totOutput.append(op)
