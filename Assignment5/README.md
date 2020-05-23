@@ -1,4 +1,4 @@
-## Assignment 5: Program to Nonce and timestamp given block data
+## Assignment 5: Program to find Nonce and timestamp given block data
 
 - Takes `index`, `parentHash`,`target` and path of block body binary file.
 - Then it tries to find a combination of timestamp and nonce number that yields a header hash less than the target.
