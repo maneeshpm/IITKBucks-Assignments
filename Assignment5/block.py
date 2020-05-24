@@ -33,7 +33,7 @@ class block:
             if int(self.getHeaderHash(),16) <= self.target:
                 break
         t2 = time.perf_counter()
-        print("Nonce found!\n nonce = {}, timestamp={:0.6f}, hash={}".format(self.nonce, self.timestamp, self.getHeaderHash()))
+        print("Nonce found!\nNonce = {}, Timestamp={:0.6f}, Hash={}".format(self.nonce, self.timestamp, self.getHeaderHash()))
         print("Time elapsed = {}m {}s".format(int((t2-t1)/60), int((t2-t1))%60))
             
 
