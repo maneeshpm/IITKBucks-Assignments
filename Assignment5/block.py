@@ -29,7 +29,7 @@ class block:
         t1 = time.perf_counter()
         for i in range(maxnonce):
             self.nonce = i
-            self.timestamp = time.time()
+            self.timestamp = time.time_ns()
             if int(self.getHeaderHash(),16) <= self.target:
                 break
         t2 = time.perf_counter()
