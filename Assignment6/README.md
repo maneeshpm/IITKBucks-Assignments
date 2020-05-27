@@ -1,14 +1,14 @@
 ## Assignment 6: Server to maintain a distributed list
 
 - Contains two endpoints `/add` and `/list`.
-- `/add` receives json data in a POST request as `{"key": <integer key>, "value":<string value>}` and adds it to a dictionary as `{key:"value"}` pair. It then broadcasts POST requests to all the `peer` in the list peers on their `/add` endpoint. If the key is already present, the request is ignored.
+- `/add` receives json data in a POST request as `{"key": <integer key>, "value":<string value>}` and adds it to a dictionary as `{key:"value"}` pair. It then broadcasts POST requests to all the `peer` in the list of peers on their `/add` endpoint. If the key is already present, the request is ignored.
 - `list` receives get request and returns jsonified version of the dictionary.
 
 #### Running the code
 ```
 maneesh@edith ~/Assignment6$ python3 server.py
 ```
-assuming the servers in the peers list are active, we now make POST request to our server.
+Assuming the servers in the peers list are active, we now make POST request on `/add`.
 ```
 maneesh@edith ~/Assignment6$ echo '{"key": 1, "value":"testval"}' | http localhost:8787/add
 HTTP/1.0 200 OK
@@ -22,6 +22,7 @@ SENT {1 : "testval"} TO http://localhost:8786/add, STATUS = 200, OK
 SENT {1 : "testval"} TO http://localhost:8785/add, STATUS = 200, OK
 
 ```
+Making a GET request on `/list`
 ```
 maneesh@edith ~/Assignment6$ http localhost:8787/list
 HTTP/1.0 200 OK
