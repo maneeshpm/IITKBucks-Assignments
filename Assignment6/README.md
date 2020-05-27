@@ -1,4 +1,4 @@
-## Assignment 6: Server to maintain a distributed list
+## Assignment 6: Server to maintain a distributed map
 
 - Contains two endpoints `/add` and `/list`.
 - `/add` receives json data in a POST request as `{"key": <integer key>, "value":<string value>}` and adds it to a dictionary as `{key:"value"}` pair. It then broadcasts POST requests to all the `peer` in the list of peers on their `/add` endpoint. If the key is already present, the request is ignored.
