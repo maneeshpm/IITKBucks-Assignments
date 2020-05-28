@@ -4,12 +4,13 @@ import requests
 app = Flask(__name__)
 
 m = {}
-peers = ["http://localhost:8786/add","http://localhost:8785/add"]
+peers = []
+#peers = ["http://localhost:8786/add","http://localhost:8785/add"]
 
 
 @app.route('/')
 def home():
-    return "Server Running!"
+    return "<h3>\"Rabbit, Fire up the server!\"</h3>Thor,<br>The strongest avenger"
 
 
 @app.route('/add', methods=['POST'])
