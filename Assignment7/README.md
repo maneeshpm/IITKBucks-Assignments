@@ -1,4 +1,4 @@
-## Assignment 6: Server to exhibit threading capacities and thread control using requests
+## Assignment 7: Server to exhibit threading capacities and thread control using requests
 
 - Contains two endpoints `/start` and `/result`.
 - `/start` receives json data in a POST request as `{"data": <string>}` and starts a thread which tries to mine for a nonce value for that perticular string.
